@@ -18,22 +18,9 @@ def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
 
     return karbohidrat_harian
 
-def hitung_kalori(karbohidrat, protein, lemak):
-    # Set nilai kalori per gram untuk karbohidrat, protein, dan lemak
-    kalori_per_gram = {
-        "karbohidrat": 4,
-        "protein": 4,
-        "lemak": 9
-    }
-
-    # Hitung total kalori berdasarkan asupan karbohidrat, protein, dan lemak
-    total_kalori = (karbohidrat * kalori_per_gram["karbohidrat"]) + (protein * kalori_per_gram["protein"]) + (lemak * kalori_per_gram["lemak"])
-
-    return total_kalori
-
 def main():
     st.sidebar.title('Navigasi')
-    page = st.sidebar.radio("Pilih Halaman", ["Perkenalan Kelompok", "Pengetahuan Kalkulator Karbohidrat", "Perhitungan Kebutuhan Karbohidrat", "Informasi Hitung Kalori", "Informasi Hitung Kandungan Gula", "Daftar Informasi Sumber Karbohidrat", "Tips Diet Karbo Seimbang"])
+    page = st.sidebar.radio("Pilih Halaman", ["Perkenalan Kelompok", "Pengetahuan Kalkulator Karbohidrat", "Perhitungan Kebutuhan Karbohidrat", "Daftar Informasi Sumber Karbohidrat", "Tips Diet Karbo Seimbang"])
 
     if page == "Perkenalan Kelompok":
         st.title("Perkenalan Kelompok")
@@ -94,47 +81,6 @@ def main():
             if usia > 60:
                 st.info("Anda sudah berusia di atas 60 tahun, pastikan untuk mengonsumsi makanan yang kaya nutrisi untuk mendukung kesehatan Anda.")
 
-    elif page == "Informasi Hitung Kalori":
-        st.title("Informasi Hitung Kalori")
-        # Garis pembatas berwarna-warni
-        st.markdown(
-            '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
-            unsafe_allow_html=True
-        )
-        st.write("Perhitungan total kalori berdasarkan asupan karbohidrat, protein, dan lemak")
-        karbohidrat = st.number_input("Masukkan jumlah karbohidrat (gram):", min_value=0.0)
-        protein = st.number_input("Masukkan jumlah protein (gram):", min_value=0.0)
-        lemak = st.number_input("Masukkan jumlah lemak (gram):", min_value=0.0)
-
-        if st.button("Hitung"):
-            total_kalori = hitung_kalori(karbohidrat, protein, lemak)
-            st.success(f"Total kalori harian Anda adalah: {total_kalori:.2f} kalori")
-
-    elif page == "Informasi Hitung Kandungan Gula":
-        st.title("Informasi Hitung Kandungan Gula")
-        # Garis pembatas berwarna-warni
-        st.markdown(
-            '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
-            unsafe_allow_html=True
-        )
-        st.write("Perhitungan gula berdasarkan jumlah karbohidrat harian yang disarankan")
-        nama = st.text_input("Masukkan nama Anda:")
-        usia = st.number_input("Masukkan usia Anda:", min_value=1, max_value=120)
-        berat_badan = st.number_input("Masukkan berat badan Anda (kg):", min_value=1.0)
-        tinggi_badan = st.number_input("Masukkan tinggi badan Anda (cm):", min_value=1.0)
-        tingkat_aktivitas = st.selectbox("Pilih tingkat aktivitas fisik Anda:", [
-            "Sangat Sedikit atau Tidak Aktif",
-            "Sedikit Aktif (Latihan Ringan/Sekali atau Dua Kali Seminggu)",
-            "Aktif (Latihan Sedang/Tiga atau Empat Kali Seminggu)",
-            "Sangat Aktif (Latihan Berat/Lima atau Enam Kali Seminggu)",
-            "Super Aktif (Latihan Berat & Pekerjaan Fisik Berat/Setiap Hari)"
-        ])
-
-        if st.button("Hitung"):
-            karbohidrat_harian = hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas)
-            gula_harian = hitung_gula(karbohidrat_harian)
-            st.success(f"Halo {nama}, jumlah gula harian yang disarankan adalah: {gula_harian:.2f} gram")
-
     elif page == "Daftar Informasi Sumber Karbohidrat":
         st.title("Daftar Informasi Sumber Karbohidrat")
         # Garis pembatas berwarna-warni
@@ -143,50 +89,17 @@ def main():
             unsafe_allow_html=True
         )
         st.write("Informasi ini dibuat untuk memberikan informasi kepada pengguna tentang jumlah karbohidrat dalam makanan, termasuk kandungan gula dan serat.")
-        nama_makanan = st.selectbox("Pilih nama makanan:", ["Nasi putih", "Nasi Merah", "Gandum", "Kentang", "Singkong", "Ubi", "Jagung"])
-
-        if nama_makanan == "Nasi putih":
-            st.markdown('''
-            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-            |------------|---------------------------|---------------------|----------------------|---------------|
-            |Nasi putih  |          28 gram          |        0 gram       |        0 gram        |     130 kcal  |
-            ''')
-        elif nama_makanan == "Nasi Merah":
-            st.markdown('''
-            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-            |------------|---------------------------|---------------------|----------------------|---------------|
-            |Nasi Merah  |          23 gram          |        0 gram       |        1 gram        |     111 kcal  |
-            ''')
-        elif nama_makanan == "Gandum":
-            st.markdown('''
-            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-            |------------|---------------------------|---------------------|----------------------|---------------|
-            |Gandum      |          68 gram          |        0 gram       |        12 gram       |     329 kcal  |
-            ''')
-        elif nama_makanan == "Kentang":
-            st.markdown('''
-            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-            |------------|---------------------------|---------------------|----------------------|---------------|
-            |Kentang     |          22 gram          |        1 gram       |        2 gram        |      77 kcal  |
-            ''')
-        elif nama_makanan == "Singkong":
-            st.markdown('''
-            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-            |------------|---------------------------|---------------------|----------------------|---------------|
-            |Singkong    |          38 gram          |        3 gram       |        3 gram        |     160 kcal  |
-            ''')
-        elif nama_makanan == "Ubi":
-            st.markdown('''
-            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-            |------------|---------------------------|---------------------|----------------------|---------------|
-            |Ubi         |          20 gram          |        1 gram       |        3 gram        |      86 kcal  |
-            ''')
-        elif nama_makanan == "Jagung":
-            st.markdown('''
-            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-            |------------|---------------------------|---------------------|----------------------|---------------|
-            |Jagung      |          36 gram          |        6 gram       |        2 gram        |     86 kcal   |
-            ''')
+        st.markdown('''
+        |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+        |------------|---------------------------|---------------------|----------------------|---------------|
+        |Nasi putih  |          28 gram          |        0 gram       |        0 gram        |     130 kcal  |
+        |Nasi Merah  |          23 gram          |        0 gram       |        1 gram        |     111 kcal  |
+        |Gandum      |          68 gram          |        0 gram       |        12 gram       |     329 kcal  |
+        |Kentang     |          22 gram          |        1 gram       |        2 gram        |      77 kcal  |
+        |Singkong    |          38 gram          |        3 gram       |        3 gram        |     160 kcal  |
+        |Ubi         |          20 gram          |        1 gram       |        3 gram        |      86 kcal  |
+        |Jagung      |          36 gram          |        6 gram       |        2 gram        |     86 kcal   |
+        ''')
 
     elif page == "Tips Diet Karbo Seimbang":
         st.title("Tips Diet Karbo Seimbang")
@@ -207,3 +120,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
