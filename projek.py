@@ -143,18 +143,50 @@ def main():
             unsafe_allow_html=True
         )
         st.write("Informasi ini dibuat untuk memberikan informasi kepada pengguna tentang jumlah karbohidrat dalam makanan, termasuk kandungan gula dan serat.")
-        st.markdown('''
-        |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
-        |------------|---------------------------|---------------------|----------------------|---------------|
-        |Nasi putih  |          28 gram          |        0 gram       |        0 gram        |     130 kcal  |
-        |Nasi Merah  |          23 gram          |        0 gram       |        1 gram        |     111 kcal  |
-        |Gandum      |          68 gram          |        0 gram       |        12 gram       |     329 kcal  |
-        |Kentang     |          22 gram          |        1 gram       |        2 gram        |      77 kcal  |
-        |Singkong    |          38 gram          |        3 gram       |        3 gram        |     160 kcal  |
-        |Ubi         |          20 gram          |        1 gram       |        3 gram        |      86 kcal  |
-        |Jagung      |          36 gram          |        6 gram       |        2 gram        |     86 kcal   |
-        ''')
+        nama_makanan = st.selectbox("Pilih nama makanan:", ["Nasi putih", "Nasi Merah", "Gandum", "Kentang", "Singkong", "Ubi", "Jagung"])
 
+        if nama_makanan == "Nasi putih":
+            st.markdown('''
+            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+            |------------|---------------------------|---------------------|----------------------|---------------|
+            |Nasi putih  |          28 gram          |        0 gram       |        0 gram        |     130 kcal  |
+            ''')
+        elif nama_makanan == "Nasi Merah":
+            st.markdown('''
+            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+            |------------|---------------------------|---------------------|----------------------|---------------|
+            |Nasi Merah  |          23 gram          |        0 gram       |        1 gram        |     111 kcal  |
+            ''')
+        elif nama_makanan == "Gandum":
+            st.markdown('''
+            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+            |------------|---------------------------|---------------------|----------------------|---------------|
+            |Gandum      |          68 gram          |        0 gram       |        12 gram       |     329 kcal  |
+            ''')
+        elif nama_makanan == "Kentang":
+            st.markdown('''
+            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+            |------------|---------------------------|---------------------|----------------------|---------------|
+            |Kentang     |          22 gram          |        1 gram       |        2 gram        |      77 kcal  |
+            ''')
+        elif nama_makanan == "Singkong":
+            st.markdown('''
+            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+            |------------|---------------------------|---------------------|----------------------|---------------|
+            |Singkong    |          38 gram          |        3 gram       |        3 gram        |     160 kcal  |
+            ''')
+        elif nama_makanan == "Ubi":
+            st.markdown('''
+            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+            |------------|---------------------------|---------------------|----------------------|---------------|
+            |Ubi         |          20 gram          |        1 gram       |        3 gram        |      86 kcal  |
+            ''')
+        elif nama_makanan == "Jagung":
+            st.markdown('''
+            |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
+            |------------|---------------------------|---------------------|----------------------|---------------|
+            |Jagung      |          36 gram          |        6 gram       |        2 gram        |     86 kcal   |
+            ''')
 
     elif page == "Tips Diet Karbo Seimbang":
         st.title("Tips Diet Karbo Seimbang")
