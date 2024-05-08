@@ -132,6 +132,7 @@ def main():
             |Nama Makanan|Jumlah Karbohidrat per 100g|Jumlah Gula per 100g|Jumlah Serat per 100g|Kalori per 100g|
             |------------|---------------------------|---------------------|----------------------|---------------|
             |Jagung      |          36 gram          |        6 gram       |        2 gram        |     86 kcal   |
+            ''')
 
     elif page == "Tips Diet Karbo Seimbang":
         st.title("Tips Diet Karbo Seimbang")
