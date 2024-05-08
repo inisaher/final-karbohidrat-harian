@@ -81,7 +81,7 @@ def main():
             if usia > 60:
                 st.info("Anda sudah berusia di atas 60 tahun, pastikan untuk mengonsumsi makanan yang kaya nutrisi untuk mendukung kesehatan Anda.")
 
-     elif page == "Daftar Informasi Sumber Karbohidrat":
+    elif page == "Daftar Informasi Sumber Karbohidrat":
         st.title("Daftar Informasi Sumber Karbohidrat")
         # Garis pembatas berwarna-warni
         st.markdown(
@@ -150,6 +150,10 @@ def main():
         4. Hindari karbohidrat bersamaan dengan lemak tinggi
         5. Dan pastikan diimbangi dengan melakukan olahraga
         ''')
+
+if __name__ == "__main__":
+    main()
+
 
 if __name__ == "__main__":
     main()
