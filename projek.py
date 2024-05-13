@@ -1,5 +1,17 @@
 import streamlit as st
 
+# Menambahkan latar belakang warna
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #f0f2f6; /* Ubah kode warna sesuai keinginan Anda */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
     # Daftar faktor tingkat aktivitas
     faktor_aktivitas = {
