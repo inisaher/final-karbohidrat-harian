@@ -1,5 +1,7 @@
 import streamlit as st
 
+st.image("https://res.cloudinary.com/dk0z4ums3/image/upload/v1627618536/attached_image/mengingatkan-kembali-kepada-manfaat-karbohidrat.jpg", caption='sumber karbohidrat')
+
 def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
     # Daftar faktor tingkat aktivitas
     faktor_aktivitas = {
