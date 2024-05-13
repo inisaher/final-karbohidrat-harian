@@ -1,5 +1,33 @@
 import streamlit as st
 
+# Mengatur warna latar belakang dan gaya font
+st.markdown(
+    """
+    <style>
+    .stApp {
+        background-color: #f3e9df;  /* Warna latar belakang baru */
+        color: #c99548;             /* Warna teks baru */
+        font-size: 18px;            /* Ukuran font tetap */
+    }
+    .css-1d391kg {
+        color: #c99548;             /* Mengatur warna teks untuk elemen tertentu */
+    }
+    table {
+        border: 2px solid #fb8e54;  /* Garis tabel dengan warna baru */
+    }
+    th {
+        background-color: #fb8e54;  /* Warna latar untuk header tabel */
+        color: white;               /* Warna teks untuk header tabel */
+    }
+    td {
+        background-color: #f3e9df;  /* Warna latar untuk sel tabel */
+        color: black;               /* Warna teks untuk sel tabel */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
     # Daftar faktor tingkat aktivitas
     faktor_aktivitas = {
@@ -153,7 +181,6 @@ def main():
         4. Hindari karbohidrat bersamaan dengan lemak tinggi
         5. Dan pastikan diimbangi dengan melakukan olahraga
         ''')
-        st.image("https://cdn.hellosehat.com/wp-content/uploads/2016/10/karbohidrat-untuk-diet.jpg?w=1080&q=75", caption='karbohidrat sehat')
 
 if __name__ == "__main__":
     main()
