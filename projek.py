@@ -1,17 +1,5 @@
 import streamlit as st
 
-# Menambahkan latar belakang warna merah
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #fff8e1; /* merah */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
 def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
     # Daftar faktor tingkat aktivitas
     faktor_aktivitas = {
@@ -56,6 +44,8 @@ def main():
             '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
             unsafe_allow_html=True
         )
+
+        st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.suara.com%2Ftekno%2F2021%2F12%2F07%2F065038%2F4-fungsi-karbohidrat-untuk-tubuh-yang-perlu-diketahui&psig=AOvVaw3lwkp2fMzxQaKrVuRstBWk&ust=1715667528831000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjjqt79iYYDFQAAAAAdAAAAABAX", caption='sumber karbohidrat')
 
         st.write('''Aplikasi ini membantu Anda menghitung kebutuhan karbohidrat harian berdasarkan faktor-faktor seperti usia, berat badan, tinggi badan, dan tingkat aktivitas fisik.
         Aplikasi membantu ini dalam merencanakan diet seimbang dengan memastikan asupan karbohidrat yang cukup, yang merupakan sumber energi utama bagi tubuh. 
