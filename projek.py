@@ -148,14 +148,12 @@ def main():
         st.markdown('''
         Bagaimanakah cara mengontrol asupan karbo harian?
         1. Pilih karbohidrat yang sehat
-        
-        st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fhellosehat.com%2Fnutrisi%2Ffakta-gizi%2Fsumber-karbohidrat%2F&psig=AOvVaw3nbSoFNKtGfPWW5DtjWpyD&ust=1715669163489000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPjp_IWEioYDFQAAAAAdAAAAABAE", caption='karbohidrat sehat')
-        
         2. Kontrol porsi
         3. Pertimbangkan waktu konsumsi
         4. Hindari karbohidrat bersamaan dengan lemak tinggi
         5. Dan pastikan diimbangi dengan melakukan olahraga
         ''')
+        st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fhellosehat.com%2Fnutrisi%2Ffakta-gizi%2Fsumber-karbohidrat%2F&psig=AOvVaw3nbSoFNKtGfPWW5DtjWpyD&ust=1715669163489000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPjp_IWEioYDFQAAAAAdAAAAABAE", caption='karbohidrat sehat')
 
 if __name__ == "__main__":
     main()
