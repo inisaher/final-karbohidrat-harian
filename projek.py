@@ -45,7 +45,7 @@ def main():
             unsafe_allow_html=True
         )
 
-        st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.suara.com%2Ftekno%2F2021%2F12%2F07%2F065038%2F4-fungsi-karbohidrat-untuk-tubuh-yang-perlu-diketahui&psig=AOvVaw3lwkp2fMzxQaKrVuRstBWk&ust=1715667528831000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCKjjqt79iYYDFQAAAAAdAAAAABAX", caption='sumber karbohidrat')
+      st.image("https://res.cloudinary.com/dk0z4ums3/image/upload/v1627618536/attached_image/mengingatkan-kembali-kepada-manfaat-karbohidrat.jpg", width=300)
 
         st.write('''Aplikasi ini membantu Anda menghitung kebutuhan karbohidrat harian berdasarkan faktor-faktor seperti usia, berat badan, tinggi badan, dan tingkat aktivitas fisik.
         Aplikasi membantu ini dalam merencanakan diet seimbang dengan memastikan asupan karbohidrat yang cukup, yang merupakan sumber energi utama bagi tubuh. 
