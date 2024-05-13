@@ -181,6 +181,7 @@ def main():
         4. Hindari karbohidrat bersamaan dengan lemak tinggi
         5. Dan pastikan diimbangi dengan melakukan olahraga
         ''')
+        st.image("https://img-cdn.medkomtek.com/RGGtwKmL7MT5n-Mq3S6Vxsxjii4=/730x411/smart/filters:quality(100):format(webp)/article/GoeMvuxiFO6EOd15bez8g/original/1679298892-sumber%20karbohidrat.jpg", width=300)
 
 if __name__ == "__main__":
     main()
