@@ -16,8 +16,6 @@ def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
     # Sesuaikan jumlah karbohidrat berdasarkan tingkat aktivitas
     karbohidrat_harian *= faktor_aktivitas[tingkat_aktivitas]
 
-   st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fhellosehat.com%2Fnutrisi%2Ffakta-gizi%2Fkarbohidrat%2F&psig=AOvVaw03VqHenfquY4BuoQOJdc3y&ust=1715664005866000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOiqvtTwiYYDFQAAAAAdAAAAABAE", caption='Sumber Karbohidrat')
-
     return karbohidrat_harian
 
 def main():
@@ -46,6 +44,8 @@ def main():
             '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
             unsafe_allow_html=True
         )
+         st.image("https://res.cloudinary.com/dk0z4ums3/image/upload/v1627618536/attached_image/mengingatkan-kembali-kepada-manfaat-karbohidrat.jpg", width=300)
+
         st.write('''Aplikasi ini membantu Anda menghitung kebutuhan karbohidrat harian berdasarkan faktor-faktor seperti usia, berat badan, tinggi badan, dan tingkat aktivitas fisik.
         Aplikasi membantu ini dalam merencanakan diet seimbang dengan memastikan asupan karbohidrat yang cukup, yang merupakan sumber energi utama bagi tubuh. 
         Serta aplikasi ini dapat menyajikan saran menu makanan (karbohidrat) untuk diet seimbang.''')
