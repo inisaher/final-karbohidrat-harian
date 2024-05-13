@@ -5,7 +5,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #fff8e1; /* Ubah kode warna sesuai keinginan Anda */
+        background-color: #fff8e1; /* krim */
     }
     </style>
     """,
