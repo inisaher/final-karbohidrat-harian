@@ -1,5 +1,17 @@
 import streamlit as st
 
+# Menambahkan latar belakang warna krim
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #fff8e1; /* Ubah kode warna sesuai keinginan Anda */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
     # Daftar faktor tingkat aktivitas
     faktor_aktivitas = {
@@ -44,7 +56,6 @@ def main():
             '<hr style="border: none; height: 5px; background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);"/>',
             unsafe_allow_html=True
         )
-         st.image("https://res.cloudinary.com/dk0z4ums3/image/upload/v1627618536/attached_image/mengingatkan-kembali-kepada-manfaat-karbohidrat.jpg", width=300)
 
         st.write('''Aplikasi ini membantu Anda menghitung kebutuhan karbohidrat harian berdasarkan faktor-faktor seperti usia, berat badan, tinggi badan, dan tingkat aktivitas fisik.
         Aplikasi membantu ini dalam merencanakan diet seimbang dengan memastikan asupan karbohidrat yang cukup, yang merupakan sumber energi utama bagi tubuh. 
