@@ -16,7 +16,7 @@ def hitung_karbohidrat(berat_badan, tinggi_badan, usia, tingkat_aktivitas):
     # Sesuaikan jumlah karbohidrat berdasarkan tingkat aktivitas
     karbohidrat_harian *= faktor_aktivitas[tingkat_aktivitas]
 
-    st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fhellosehat.com%2Fnutrisi%2Ffakta-gizi%2Fkarbohidrat%2F&psig=AOvVaw03VqHenfquY4BuoQOJdc3y&ust=1715664005866000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOiqvtTwiYYDFQAAAAAdAAAAABAE", caption='Sumber Karbohidrat')
+   st.image("https://www.google.com/url?sa=i&url=https%3A%2F%2Fhellosehat.com%2Fnutrisi%2Ffakta-gizi%2Fkarbohidrat%2F&psig=AOvVaw03VqHenfquY4BuoQOJdc3y&ust=1715664005866000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOiqvtTwiYYDFQAAAAAdAAAAABAE", caption='Sumber Karbohidrat')
 
     return karbohidrat_harian
 
