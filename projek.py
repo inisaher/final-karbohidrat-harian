@@ -1,11 +1,11 @@
 import streamlit as st
 
-# Menambahkan latar belakang warna krim
+# Menambahkan latar belakang warna merah
 st.markdown(
     """
     <style>
     body {
-        background-color: #fff8e1; /* krim */
+        background-color: #fff8e1; /* merah */
     }
     </style>
     """,
