@@ -148,6 +148,7 @@ def main():
         st.markdown('''
         Bagaimanakah cara mengontrol asupan karbo harian?
         1. Pilih karbohidrat yang sehat
+        st.image("https://cdn.hellosehat.com/wp-content/uploads/2016/10/karbohidrat-untuk-diet.jpg?w=1080&q=75", caption='karbohidrat sehat')
         2. Kontrol porsi
         3. Pertimbangkan waktu konsumsi
         4. Hindari karbohidrat bersamaan dengan lemak tinggi
